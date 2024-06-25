@@ -55,7 +55,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/api/product/hash", methods=["GET"])
-def getProductHash():
+def get_product_hash():
     import hashlib
     products = db.get_products(db_connection, 100, 0)
     product_id = int(request.args.get('pid', 0))
